@@ -26,7 +26,7 @@ int main(int argc, char* argv[])
             letterAnalyzer.addFromString(line);
         }
 
-        letterAnalyzer.sortByÂescendingCount();
+        letterAnalyzer.sortByDescendingCount();
         if (out.is_open()) {
             out << letterAnalyzer.toString();
             cout << "Success program execution!" << endl;

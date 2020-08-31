@@ -59,7 +59,7 @@ public:
      * Sort letters from the container based on
      * their count in descending order.
      */
-    void sortByÂescendingCount() {
+    void sortByDescendingCount() {
         sort(letters.begin(), letters.end(),
             [](CharacterCounter& a, CharacterCounter& b) { return a.getCount() > b.getCount(); }
         );
