@@ -1,49 +1,22 @@
-#include<string>
+#include "CharacterCounter.h"
 
-/**
- * Class represents a container for character
- * and its count.
- */
-class CharacterCounter {
-private:
-    char charValue;
-    int count;
+CharacterCounter::CharacterCounter(char charValue) {
+    this->charValue = charValue;
+    this->count = 1;
+}
 
-public:
-    /**
-     * Constructs a new object instance for character
-     * with its one copy.
-     */
-    CharacterCounter(char charValue) {
-        this->charValue = charValue;
-        this->count = 1;
-    }
+char CharacterCounter::getCharValue() {
+    return charValue;
+}
 
-    /**
-     * Returns character value.
-     */
-    char getCharValue() {
-        return charValue;
-    }
-    /**
-     * Returns character's count.
-     */
-    int getCount() {
-        return count;
-    }
+int CharacterCounter::getCount() {
+    return count;
+}
 
-    /**
-     * Adds one copy of character
-     * from the container.
-     */
-    void addCharInstance() {
-        count++;
-    }
+void CharacterCounter::addCharInstance() {
+    count++;
+}
 
-    /**
-     * Returns a string representation of the object.
-     */
-    std::string toString() {
-        return std::string(1, charValue) + " - " + std::to_string(count);
-    }
-};
+std::string CharacterCounter::toString() {
+    return std::string(1, charValue) + " - " + std::to_string(count);
+}

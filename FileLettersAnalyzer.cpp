@@ -1,6 +1,6 @@
 #include <iostream>
 #include<fstream>
-#include "LettersAnalyzer.cpp"
+#include "LettersAnalyzer.h"
 using namespace std;
 
 

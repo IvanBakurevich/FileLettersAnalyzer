@@ -140,8 +140,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="FileLettersAnalyzer.cpp" />
-    <ClCompile Include="CharacterCounter.cpp" />
+    <ClCompile Include="CharacterCounter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="LettersAnalyzer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CharacterCounter.h" />
+    <ClInclude Include="LettersAnalyzer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
