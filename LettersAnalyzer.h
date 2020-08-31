@@ -6,6 +6,11 @@
 
 using namespace std;
 
+/**
+ * Class represents a container that
+ * contains set of letters with
+ * each letter's count.
+ */
 class LettersAnalyzer {
 private:
     vector<CharacterCounter> letters;

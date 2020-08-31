@@ -2,6 +2,10 @@
 #define CHARACTER_COUNTER_H
 #include<string>
 
+/**
+ * Class represents a container for character
+ * and its count.
+ */
 class CharacterCounter {
 private:
     char charValue;
@@ -18,6 +22,7 @@ public:
      * Returns character value.
      */
     char getCharValue();
+     
     /**
      * Returns character's count.
      */
