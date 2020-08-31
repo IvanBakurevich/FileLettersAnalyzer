@@ -12,12 +12,12 @@ int main(int argc, char* argv[])
         }
 
         ifstream in(argv[1]);
-        ofstream out(argv[2]);
 
         if (!in.is_open()) {
             throw 1;
         }
         else {
+            ofstream out(argv[2]);
             setlocale(LC_ALL, "ru");
             LettersAnalyzer letterAnalyzer;
             string line;
@@ -31,10 +31,10 @@ int main(int argc, char* argv[])
                 out << letterAnalyzer.toString();
                 cout << "Success program execution!" << endl;
             }
+            out.close();
         }
 
         in.close();
-        out.close();
     }
     catch (int e) {
         cerr << "Exception: ";
