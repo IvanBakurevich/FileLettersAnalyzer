@@ -22,7 +22,7 @@ public:
      * Returns character value.
      */
     char getCharValue();
-     
+
     /**
      * Returns character's count.
      */
@@ -33,6 +33,10 @@ public:
      * from the container.
      */
     void addCharInstance();
+
+    bool operator ==(const CharacterCounter& obj);
+
+    bool operator !=(const CharacterCounter& obj);
 
     /**
      * Returns a string representation of the object.

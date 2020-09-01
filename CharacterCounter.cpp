@@ -17,6 +17,14 @@ void CharacterCounter::addCharInstance() {
     count++;
 }
 
+bool CharacterCounter::operator ==(const CharacterCounter& obj) {
+    return (charValue == obj.charValue && count == obj.count);
+}
+
+bool CharacterCounter::operator !=(const CharacterCounter& obj) {
+    return !(charValue == obj.charValue && count == obj.count);
+}
+
 std::string CharacterCounter::toString() {
     return std::string(1, charValue) + " - " + std::to_string(count);
 }

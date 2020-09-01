@@ -7,6 +7,11 @@ bool LettersAnalyzer::isRusEngLetter(char ch) {
     return false;
 }
 
+vector<CharacterCounter> LettersAnalyzer::getLetters() {
+    vector<CharacterCounter> vec(letters);
+    return vec;
+}
+
 void LettersAnalyzer::addFromString(string str) {
     for (int i = 0; i < str.length(); i++) {
         addLetter(str[i]);

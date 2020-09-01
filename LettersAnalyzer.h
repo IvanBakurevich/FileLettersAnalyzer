@@ -22,6 +22,11 @@ public:
     static bool isRusEngLetter(char ch);
 
     /**
+     * Returns vector containing letters and their count.
+     */
+    vector<CharacterCounter> getLetters();
+
+    /**
      * Adds every letter from string to the container.
      */
     void addFromString(string str);
