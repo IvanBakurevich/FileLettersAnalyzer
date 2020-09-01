@@ -1,27 +1,30 @@
-#include<string>
+#include "CharacterCounter.h"
 
-class CharacterCounter {
-private:
-    char charValue;
-    int count;
+CharacterCounter::CharacterCounter(char charValue) {
+    this->charValue = charValue;
+    this->count = 1;
+}
 
-public:
-    CharacterCounter(char charValue) {
-        this->charValue = charValue;
-        this->count = 1;
-    }
+char CharacterCounter::getCharValue() {
+    return charValue;
+}
 
-    char getCharValue() {
-        return charValue;
-    }
-    int getCount() {
-        return count;
-    }
+int CharacterCounter::getCount() {
+    return count;
+}
 
-    void addCharInstance() {
-        count++;
-    }
-    std::string toString() {
-        return std::string(1, charValue) + " - " + std::to_string(count);
-    }
-};
+void CharacterCounter::addCharInstance() {
+    count++;
+}
+
+bool CharacterCounter::operator ==(const CharacterCounter& obj) {
+    return (charValue == obj.charValue && count == obj.count);
+}
+
+bool CharacterCounter::operator !=(const CharacterCounter& obj) {
+    return !(charValue == obj.charValue && count == obj.count);
+}
+
+std::string CharacterCounter::toString() {
+    return std::string(1, charValue) + " - " + std::to_string(count);
+}
